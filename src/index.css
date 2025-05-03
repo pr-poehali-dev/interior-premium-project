@@ -86,3 +86,8 @@
     transform: translateY(0);
   }
 }
+
+/* Плавная анимация для скроллинга страницы */
+html {
+  scroll-behavior: smooth;
+}
