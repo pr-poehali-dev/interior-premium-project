@@ -17,14 +17,14 @@ const HeroSection = () => {
             
             <p 
               className="text-lg text-gray-600 max-w-lg animate-fade-in"
-              style={{animationDelay: '0.2s'}}
+              style={{animationDelay: "0.2s"}}
             >
               Создаём продуманные до мельчайших деталей интерьеры без ошибок и стресса, чтобы вы могли жить и работать в пространстве, идеально подстроенном под ваш образ жизни.
             </p>
             
             <div 
               className="flex flex-col sm:flex-row gap-4 animate-fade-in"
-              style={{animationDelay: '0.4s'}}
+              style={{animationDelay: "0.4s"}}
             >
               <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Заказать консультацию
@@ -36,9 +36,10 @@ const HeroSection = () => {
           </div>
           
           <div
-            className="relative z-10 hidden lg:block"
+            className="relative z-10 hidden lg:block animate-fade-in"
+            style={{animationDelay: "0.3s"}}
           >
-            <div className="relative animate-fade-in" style={{animationDelay: '0.6s'}}>
+            <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
                 alt="Стильный современный интерьер" 
