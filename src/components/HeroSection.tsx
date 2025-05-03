@@ -8,24 +8,16 @@ const HeroSection = () => {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 z-10">
-            <h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight animate-fade-in"
-            >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight opacity-0 animate-[fadeIn_0.6s_ease-out_forwards]">
               Интерьеры, которые<br />
               <span className="text-primary">работают на вас</span>
             </h1>
             
-            <p 
-              className="text-lg text-gray-600 max-w-lg animate-fade-in"
-              style={{animationDelay: "0.2s"}}
-            >
+            <p className="text-lg text-gray-600 max-w-lg opacity-0 animate-[fadeIn_0.6s_ease-out_0.2s_forwards]">
               Создаём продуманные до мельчайших деталей интерьеры без ошибок и стресса, чтобы вы могли жить и работать в пространстве, идеально подстроенном под ваш образ жизни.
             </p>
             
-            <div 
-              className="flex flex-col sm:flex-row gap-4 animate-fade-in"
-              style={{animationDelay: "0.4s"}}
-            >
+            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-[fadeIn_0.6s_ease-out_0.4s_forwards]">
               <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Заказать консультацию
               </Button>
@@ -35,10 +27,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div
-            className="relative z-10 hidden lg:block animate-fade-in"
-            style={{animationDelay: "0.3s"}}
-          >
+          <div className="relative z-10 hidden lg:block opacity-0 animate-[fadeIn_0.6s_ease-out_0.3s_forwards]">
             <div className="relative">
               <img 
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"

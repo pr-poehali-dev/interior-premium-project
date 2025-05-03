@@ -57,7 +57,7 @@ const PortfolioSection = () => {
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-primary uppercase text-sm font-semibold tracking-wider mb-2">Наши работы</h2>
-          <h3 className="text-3xl md:text-4xl font-bold font-playfair mb-8">Реализованные проекты</h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-8">Реализованные проекты</h3>
           
           <div className="flex flex-wrap justify-center gap-2 mb-10">
             {categories.map(category => (
@@ -74,10 +74,13 @@ const PortfolioSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map(item => (
+          {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              className="relative group rounded-xl overflow-hidden cursor-pointer animate-fade-in"
+              className="relative group rounded-xl overflow-hidden cursor-pointer opacity-0"
+              style={{ 
+                animation: `fadeIn 0.5s ease-out ${0.1 * index}s forwards` 
+              }}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >
