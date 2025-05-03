@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import Container from "@/components/ui/Container";
-import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -9,30 +8,23 @@ const HeroSection = () => {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 z-10">
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight animate-fade-in"
             >
               Интерьеры, которые<br />
               <span className="text-primary">работают на вас</span>
-            </motion.h1>
+            </h1>
             
-            <motion.p 
-              className="text-lg text-gray-600 max-w-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <p 
+              className="text-lg text-gray-600 max-w-lg animate-fade-in"
+              style={{animationDelay: '0.2s'}}
             >
               Создаём продуманные до мельчайших деталей интерьеры без ошибок и стресса, чтобы вы могли жить и работать в пространстве, идеально подстроенном под ваш образ жизни.
-            </motion.p>
+            </p>
             
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div 
+              className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+              style={{animationDelay: '0.4s'}}
             >
               <Button size="lg" className="bg-primary hover:bg-primary/90">
                 Заказать консультацию
@@ -40,16 +32,13 @@ const HeroSection = () => {
               <Button variant="outline" size="lg">
                 Смотреть проекты
               </Button>
-            </motion.div>
+            </div>
           </div>
           
-          <motion.div
+          <div
             className="relative z-10 hidden lg:block"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
           >
-            <div className="relative">
+            <div className="relative animate-fade-in" style={{animationDelay: '0.6s'}}>
               <img 
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
                 alt="Стильный современный интерьер" 
@@ -69,7 +58,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </Container>
       

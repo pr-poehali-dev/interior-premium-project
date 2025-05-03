@@ -1,7 +1,6 @@
 
 import Container from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 const portfolioItems = [
@@ -76,14 +75,11 @@ const PortfolioSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map(item => (
-            <motion.div
+            <div
               key={item.id}
-              className="relative group rounded-xl overflow-hidden cursor-pointer"
-              onHoverStart={() => setHoveredItem(item.id)}
-              onHoverEnd={() => setHoveredItem(null)}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              className="relative group rounded-xl overflow-hidden cursor-pointer animate-fade-in"
+              onMouseEnter={() => setHoveredItem(item.id)}
+              onMouseLeave={() => setHoveredItem(null)}
             >
               <div className="aspect-[4/3]">
                 <img 
@@ -102,7 +98,7 @@ const PortfolioSection = () => {
                   <h4 className="text-white text-xl font-medium mt-1">{item.title}</h4>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
         
